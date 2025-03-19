@@ -1,0 +1,33 @@
+# Funcionalidades do Sistema - Cenários de Teste
+Este documento descreve os cenários de teste para a funcionalidade de Busca e Contato com Profissional de Saúde.
+## Feature: Busca e Contato com Profissional de Saúde
+### Scenario: Usuário busca profissional com sucesso
+```gherkin
+Given que o usuário está logado no sistema
+When acessa a funcionalidade de busca de profissionais
+And insere os critérios de busca válidos
+Then o sistema deve exibir uma lista de profissionais disponíveis
+Scenario: Usuário entra em contato com profissional
+Given que o usuário encontrou um profissional na busca
+When seleciona um profissional e inicia um contato
+Then o sistema deve permitir o envio da mensagem de contato
+Como Executar os Testes
+Este projeto utiliza o Cypress para a automação dos testes. Para executar os testes, siga os passos abaixo.
+Pré-requisitos
+Node.js
+Cypress
+Passos
+Clone o repositório:
+bash
+git clone https://github.com/usuario/projeto-cadastro-usuarios.git
+cd projeto-cadastro-usuarios
+Instale as dependências do projeto:
+bash
+npm install
+Abra o Cypress:
+bash
+npx cypress open
+Selecione os testes para execução na interface do Cypress.
+Para rodar os testes em modo headless (sem interface gráfica):
+bash
+npx cypress run
