@@ -1,0 +1,8 @@
+# Funcionalidades do Sistema - Cenários de Teste
+Este documento descreve os cenários de teste para a funcionalidade de Recuperação de Senha.
+## Feature: Recuperação de Senha
+### Scenario: Usuário solicita recuperação de senha
+Given que o usuário acessa a página de login
+When seleciona a opção de "Esqueci minha senha"
+And informa um e-mail válido
+Then o sistema deve enviar um e-mail com o link de redefinição
