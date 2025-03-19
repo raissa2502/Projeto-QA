@@ -1,0 +1,21 @@
+Scenario: Medir o tempo de resposta e a estabilidade sob carga durante login
+Given que o sistema está disponível
+When 100 usuários simultâneos tentam realizar o login
+Then o tempo médio de resposta deve ser inferior a 2 segundos
+And o tempo máximo de resposta não deve ultrapassar 2,5 segundos
+And a taxa de erro deve ser 0%
+Scenario: Medir o tempo de resposta e a estabilidade sob carga durante o cadastro de usuário
+Given que o sistema está disponível
+When 100 usuários simultâneos tentam se cadastrar
+Then o tempo médio de resposta deve ser inferior a 3 segundos
+And o tempo máximo de resposta não deve ultrapassar 3,5 segundos
+And a taxa de erro deve ser inferior a 1%
+Scenario: Verificar a estabilidade do sistema sob carga
+Given que 100 usuários estão realizando login ou cadastro simultaneamente
+When o sistema estiver sob carga
+Then o sistema deve permanecer estável
+And não deve ocorrer falhas no processo de login ou cadastro
+Explicação:
+Cenário 1: Medição do tempo de resposta e da taxa de erro para o login com 100 usuários simultâneos.
+Cenário 2: Medição do tempo de resposta e da taxa de erro para o cadastro de usuário com 100 usuários simultâneos.
+Cenário 3: Verificação da estabilidade do sistema quando ele estiver sob carga (simulação de 100 usuários simultâneos realizando login ou cadastro).
