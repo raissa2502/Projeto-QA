@@ -1,0 +1,29 @@
+Feature: Automação de Testes para o Fluxo de Cadastro
+
+Scenario: Automatizar fluxo de cadastro com Cucumber e Cypress
+Given que o usuário acessa a página de cadastro
+When o usuário preenche todos os campos obrigatórios corretamente
+And submete o cadastro
+Then o sistema deve exibir uma mensagem de sucesso
+And o usuário deve receber um e-mail de verificação
+
+Scenario: Validar a execução automatizada dos testes no pipeline de CI
+Given que o repositório de código está configurado com integração contínua (CI)
+When um commit é realizado no repositório
+Then os testes automatizados devem ser executados automaticamente
+And um relatório de execução deve ser gerado
+And o relatório deve ser arquivado no repositório GitHub
+
+Scenario: Configuração de CI para execução de testes E2E com Cucumber e Cypress
+Given que o repositório está configurado com uma ferramenta de CI (ex: GitHub Actions, Jenkins)
+When o pipeline de CI é executado após um commit
+Then os testes E2E automatizados devem ser executados no ambiente de teste
+And o sistema deve garantir que o fluxo de cadastro esteja funcionando corretamente
+And qualquer falha nos testes deve gerar uma notificação no sistema de CI
+
+Explicação dos Cenários:
+Automatizar Fluxo de Cadastro com Cucumber e Cypress: Este cenário descreve como automatizar o fluxo de cadastro usando Cucumber (para a linguagem Gherkin) e Cypress (para testes E2E). O fluxo inclui preencher os campos obrigatórios e verificar se a mensagem de sucesso é exibida e o e-mail de verificação é enviado.
+
+Validar Execução Automática dos Testes no Pipeline de CI: Este cenário verifica se a integração contínua está configurada corretamente. Após cada commit, os testes devem ser executados automaticamente e os relatórios devem ser gerados e arquivados.
+
+Configuração de CI para Execução de Testes E2E: Este cenário verifica a configuração de CI para garantir que os testes automatizados E2E sejam executados corretamente no pipeline de integração contínua (como GitHub Actions ou Jenkins). O objetivo é garantir que o fluxo de cadastro esteja funcionando corretamente em todos os commits.
