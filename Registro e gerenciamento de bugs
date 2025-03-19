@@ -1,0 +1,38 @@
+Feature: Registro e Gerenciamento de Bugs
+
+Scenario: Registrar um bug com descrição detalhada e passos para reprodução
+Given que um bug foi identificado durante os testes de funcionalidade
+When o desenvolvedor ou tester registra o bug no sistema de rastreamento de erros
+Then a descrição do bug deve incluir:
+| Campo | Descrição |
+|---------------------|-----------------------------------------------------------------|
+| Título | Resumo claro e conciso do bug |
+| Descrição detalhada | Descrição completa sobre o erro encontrado, incluindo contexto |
+| Passos para reprodução | Lista de ações passo a passo que reproduzem o erro |
+| Impacto no sistema | Impacto do bug no funcionamento do sistema (ex.: crítico, alto) |
+| Prioridade | Prioridade de correção (ex.: alta, média, baixa) |
+And o bug deve ser registrado com clareza, incluindo uma sugestão de melhoria, se aplicável
+
+Scenario: Propor melhorias com base nos resultados dos testes
+Given que um teste de funcionalidade foi executado e um problema foi encontrado
+When o time de QA analisa os resultados dos testes
+Then uma sugestão de melhoria deve ser registrada, incluindo:
+| Sugestão | Justificativa |
+|---------------------------|--------------------------------------------------|
+| Melhorar o tempo de resposta | O sistema demorou mais de 3 segundos para responder |
+| Melhorar a legibilidade | O contraste de cores não atende aos padrões WCAG |
+And as sugestões de melhoria devem ser discutidas e priorizadas de forma colaborativa com a equipe de desenvolvimento
+
+Scenario: Gerenciar bugs e melhorias no repositório de documentação
+Given que todos os bugs foram registrados e as melhorias propostas
+When o time de QA organiza as informações no GitHub
+Then todos os bugs e melhorias devem ser documentados de forma clara no repositório do GitHub
+And os bugs devem ser associados a uma prioridade de correção
+And as melhorias devem ser priorizadas de acordo com o impacto na experiência do usuário
+
+Explicação dos Cenários:
+Registrar um Bug: Este cenário descreve como registrar um bug no sistema de rastreamento de erros. Ele inclui a descrição detalhada do bug, os passos para reprodução, impacto no sistema e prioridade de correção.
+
+Propor Melhorias: Após a execução de testes, caso algum problema seja identificado, sugestões de melhorias devem ser feitas e documentadas. Essas melhorias podem envolver questões como desempenho, acessibilidade ou usabilidade.
+
+Gerenciar Bugs e Melhorias no Repositório: Este cenário garante que todos os bugs e melhorias sejam devidamente registrados no GitHub, com as devidas prioridades e sugestões de melhorias discutidas com a equipe de desenvolvimento.
