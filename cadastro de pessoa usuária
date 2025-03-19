@@ -1,0 +1,18 @@
+# Funcionalidades do Sistema - Cenários de Teste
+Este documento descreve os cenários de teste para as principais funcionalidades do sistema, utilizando a linguagem Gherkin.
+## Feature: Cadastro de Pessoa Usuária
+### Scenario: Usuário realiza cadastro com atraso na verificação de e-mail
+```gherkin
+Given que o usuário acessa a página de cadastro
+When preenche todos os campos obrigatórios corretamente
+And submete o cadastro
+Then o sistema deve exibir uma mensagem de sucesso
+And um e-mail de verificação deve ser enviado
+But o e-mail de verificação pode levar alguns minutos para ser recebido
+And enquanto não for verificado, o usuário não conseguirá fazer login
+And ao tentar fazer login antes da verificação, o sistema deve informar "número de senha ou e-mail incorretos"
+And somente após a verificação do e-mail, o usuário conseguirá realizar o login corretamente
+
+
+
+
