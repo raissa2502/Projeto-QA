@@ -1,0 +1,6 @@
+Scenario: Usuário edita perfil com sucesso
+Given que o usuário está logado e acessa seu perfil
+When altera suas informações pessoais
+And salva as alterações
+Then o sistema deve exibir uma mensagem de sucesso
+And as novas informações devem ser refletidas no perfil
