@@ -1,0 +1,20 @@
+Feature: Testes de Acessibilidade
+Scenario: Validar navegação por teclado e leitores de tela
+Given que o usuário acessa a página inicial do sistema
+When o usuário navega pela página usando apenas o teclado
+Then todos os elementos interativos devem ser acessíveis e focáveis usando a tecla "Tab"
+And os leitores de tela devem anunciar corretamente todos os elementos interativos e conteúdos da página
+Scenario: Validar contraste de cores e legibilidade
+Given que o usuário acessa a página inicial do sistema
+When o usuário visualiza a página
+Then o contraste entre o texto e o fundo deve atender ao padrão mínimo de 4.5:1 para texto normal e 3:1 para texto grande
+And a legibilidade do conteúdo deve ser garantida por uma tipografia adequada, com tamanho de fonte legível (mínimo de 16px)
+Scenario: Validar conformidade com as diretrizes WCAG 2.1
+Given que o sistema está sendo testado para conformidade com as diretrizes de acessibilidade
+When a auditoria de acessibilidade é realizada no sistema
+Then o sistema deve cumprir pelo menos 80% das diretrizes do WCAG 2.1
+And a página deve ser auditada usando a ferramenta Lighthouse para validar a conformidade
+Explicação dos Cenários:
+Navegação por Teclado e Leitores de Tela: Este cenário testa se todos os elementos da página são acessíveis via teclado e se os leitores de tela conseguem anunciar corretamente os elementos e o conteúdo da página. Isso é importante para garantir que usuários com deficiência visual possam navegar no sistema de forma eficaz.
+Contraste de Cores e Legibilidade: Este cenário valida o contraste entre o texto e o fundo, garantindo que ele esteja em conformidade com as diretrizes de acessibilidade de contraste. Também verifica se a legibilidade do conteúdo é adequada, garantindo que o texto tenha tamanho e formato legíveis.
+Conformidade com as Diretrizes WCAG 2.1: Este cenário verifica se o sistema atende a pelo menos 80% das diretrizes WCAG 2.1 e utiliza a ferramenta Lighthouse para validar essa conformidade.
