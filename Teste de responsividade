@@ -1,0 +1,54 @@
+Feature: Testes de Responsividade
+
+Scenario: Verificar responsividade no dispositivo móvel
+Given que o usuário acessa o sistema em um dispositivo móvel
+When o usuário navega pela página inicial
+Then o layout da página deve ser adaptado para a tela do dispositivo móvel
+And todos os elementos interativos devem ser acessíveis e funcionais
+And a funcionalidade de navegação deve ser simples e intuitiva, com botões e links visíveis e clicáveis
+And o conteúdo deve ser legível sem a necessidade de zoom
+
+Scenario: Verificar responsividade no dispositivo desktop
+Given que o usuário acessa o sistema em um dispositivo desktop
+When o usuário navega pela página inicial
+Then o layout da página deve ser adaptado para a tela do desktop
+And todos os elementos interativos devem ser acessíveis e funcionais
+And a funcionalidade de navegação deve ser clara e fácil de usar
+And o conteúdo deve ser apresentado de forma otimizada para a tela maior
+
+Explicação dos Cenários:
+Responsividade em Dispositivo Móvel: Este cenário testa a responsividade do sistema quando visualizado em um dispositivo móvel. Ele garante que o layout e os elementos sejam ajustados para a tela menor, sem perder funcionalidade e usabilidade. A navegação deve ser clara e os botões e links devem ser acessíveis e clicáveis.
+
+Responsividade em Desktop: Este cenário testa a responsividade do sistema em dispositivos desktop, garantindo que o layout seja otimizado para uma tela maior e que todos os elementos funcionem corretamente, com uma navegação clara.
+
+Testes de Responsividade
+Este repositório contém testes de responsividade para garantir que o sistema seja utilizável e visualmente otimizado em diferentes dispositivos, como dispositivos móveis e desktops.
+
+Cenários de Teste
+1. Responsividade em Dispositivo Móvel
+Objetivo: Garantir que o layout e os elementos interativos sejam adaptados e funcionais em dispositivos móveis.
+Critérios:
+O layout da página deve se ajustar à tela do dispositivo móvel.
+Todos os elementos interativos (botões, links) devem ser acessíveis e funcionais.
+A navegação deve ser intuitiva e simples.
+O conteúdo deve ser legível sem a necessidade de zoom.
+2. Responsividade em Dispositivo Desktop
+Objetivo: Garantir que o layout e os elementos interativos sejam adaptados para dispositivos desktop.
+Critérios:
+O layout da página deve ser otimizado para a tela maior do desktop.
+Todos os elementos interativos devem ser acessíveis e funcionais.
+A navegação deve ser clara e fácil de usar.
+O conteúdo deve ser apresentado de forma otimizada para uma tela maior.
+Como Executar os Testes de Responsividade
+Dispositivos Móveis:
+
+Utilize o Modo de Emulação de Dispositivos no Google Chrome (DevTools) ou ferramentas como BrowserStack para testar a responsividade em diferentes tamanhos de telas móveis.
+Dispositivos Desktop:
+
+Realize os testes em um dispositivo desktop com diferentes resoluções de tela para verificar a adaptação do layout.
+Ferramentas:
+
+Google Chrome DevTools: Utilize o "Modo de Emulação de Dispositivos" para testar a responsividade em diferentes tamanhos de tela.
+BrowserStack: Ferramenta para testar a responsividade em múltiplos dispositivos e navegadores.
+Conclusão
+Esses testes garantem que o sistema seja visualmente otimizado e funcional em diferentes dispositivos. Caso algum problema de layout ou usabilidade seja encontrado, será necessário registrar e reportar os bugs ou inconsistências para serem corrigidos.
